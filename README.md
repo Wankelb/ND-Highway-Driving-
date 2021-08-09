@@ -149,40 +149,11 @@ The Path Planning module is broken down into the following set of 3 sub-modules:
 
 ![](/bild2.png)
 
- Prediction: Prediction of the trajectories of the surrounding detected objects
+ Prediction: Prediction of the trajectories of the surrounding detected objects.
+ in this Project Lines between 69-152 in main.cpp commense with to get data from sensor fusion including localization data in order to predict the positions for the surrounding cars.It basically checks whether there are cars in other lanes. This step is critical to avoid collision.
  
- Behavior: Defines a set of possible high-level targets for the tool to follow
+ Behavior: Defines a set of possible high-level targets for the tool to follow. In this Project Lines 154-184 in main.cpp determine whether the ego car should accelerate / brake or change lanes. The reference speed is also set here in order to prevent the speed limit from being exceeded.
  
- Trajectory: An exact path is calculated for each possible high-level target. For each trajectory, costs (based on feasibility, safety, legality, convenience, and efficiency) are derived and the trajectory with the lowest cost is selected.
+ Trajectory: An exact path is calculated for each possible high-level target. For each trajectory, costs (based on feasibility, safety, legality, convenience, and efficiency) are derived and the trajectory with the lowest cost is selected. In this Project Lines 187 through 295 in main.cpp are the orbital creation part. This section essentially creates the trajectories using the output of the behavior planning section. It is very important that the trajectory created is smooth. Otherwise, undesirable accelerations can occur. For this purpose, past trajectory points are copied and waypoints filled with splines. The acceleration depends on each point on the trajectory to maintain dynamic decision making as traffic conditions can change abruptly. Therefore, the ego car can change its speed when changing lanes.
  
  
-## Call for IDE Profiles Pull Requests
-
-Help your fellow students!
-
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to ensure
-that students don't feel pressured to use one IDE or another.
-
-However! I'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
-
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
-
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
-
-Frankly, I've never been involved in a project with multiple IDE profiles
-before. I believe the best way to handle this would be to keep them out of the
-repo root to avoid clutter. My expectation is that most profiles will include
-instructions to copy files to a new location to get picked up by the IDE, but
-that's just a guess.
-
-One last note here: regardless of the IDE used, every submitted project must
-still be compilable with cmake and make./
-
-
