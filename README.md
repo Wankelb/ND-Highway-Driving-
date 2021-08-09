@@ -114,9 +114,9 @@ using the following settings:
 Please (do your best to) stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html).
 
 ## Project Rubric
-Compilation
+**Compilation**
 
-1-The code compiles correctly.
+**1-The code compiles correctly.**
 
 
 ![](/bild1.png)
