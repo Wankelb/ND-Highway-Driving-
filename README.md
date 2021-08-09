@@ -113,6 +113,24 @@ Compilation
 
 ![](/bild1.png)
 
+2- Valid trajectories
+
+I ran the simulator for 6.70 miles without an incident.
+
+3- Speed and Acceleration Limits
+
+No speed limit red message was seen.
+
+Max jerk message was not seen.
+
+Car does not have collisions.
+
+Staying in the Lane
+
+The car stays in its lane most of the time, but may change lanes or stop in the middle lane due to traffic.
+
+
+
 ## Call for IDE Profiles Pull Requests
 
 Help your fellow students!
