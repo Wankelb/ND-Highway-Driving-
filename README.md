@@ -141,8 +141,21 @@ The car can easily change lanes when it makes sense, e.g. B. behind a slower mov
 
 ![](/uberholen.gif)
 
+## Reflection
 
+The path planning algorithms and Sensor Fusion algorithms start at src/main.cpp. A helper function (spline.h) is added for this project.
+ 
+The Path Planning module is broken down into the following set of 3 sub-modules:
 
+![](/bild2.png)
+
+ Prediction: Prediction of the trajectories of the surrounding detected objects
+ 
+ Behavior: Defines a set of possible high-level targets for the tool to follow
+ 
+ Trajectory: An exact path is calculated for each possible high-level target. For each trajectory, costs (based on feasibility, safety, legality, convenience, and efficiency) are derived and the trajectory with the lowest cost is selected.
+ 
+ 
 ## Call for IDE Profiles Pull Requests
 
 Help your fellow students!
