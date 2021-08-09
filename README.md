@@ -113,11 +113,11 @@ Compilation
 
 ![](/bild1.png)
 
-2- Valid trajectories
+**2- Valid trajectories**
 
 I ran the simulator for 6.70 miles without an incident.
 
-3- Speed and Acceleration Limits
+**3- Speed and Acceleration Limits**
 
 No speed limit red message was seen.
 
@@ -125,7 +125,7 @@ Max jerk message was not seen.
 
 Car does not have collisions.
 
-4- Staying in the Lane
+**4- Staying in the Lane**
 
 The car stays in its lane most of the time, but may change lanes or stop in the middle lane due to traffic.
 
@@ -134,7 +134,7 @@ The car stays in its lane most of the time, but may change lanes or stop in the 
 
 
 
-5- Lane Change
+**5- Lane Change**
 
 The car can easily change lanes when it makes sense, e.g. B. behind a slower moving car and when there is no other traffic in a neighboring lane.
 
@@ -145,16 +145,16 @@ The car can easily change lanes when it makes sense, e.g. B. behind a slower mov
 
 The path planning algorithms and Sensor Fusion algorithms start at src/main.cpp. A helper function (spline.h) is added for this project.
  
-The Path Planning module is broken down into the following set of 3 sub-modules:
+***The Path Planning module is broken down into the following set of 3 sub-modules:***
 
 ![](/bild2.png)
 
- Prediction: Prediction of the trajectories of the surrounding detected objects.
+  -  **Prediction:** Prediction of the trajectories of the surrounding detected objects.
  in this Project Lines between 69-152 in main.cpp commense with to get data from sensor fusion including localization data in order to predict the positions for the surrounding cars.It basically checks whether there are cars in other lanes. This step is critical to avoid collision.
  
- Behavior: Defines a set of possible high-level targets for the tool to follow. In this Project Lines 154-184 in main.cpp determine whether the ego car should accelerate / brake or change lanes. The reference speed is also set here in order to prevent the speed limit from being exceeded.
+  - **Behavior:** Defines a set of possible high-level targets for the tool to follow. In this Project Lines 154-184 in main.cpp determine whether the ego car should accelerate / brake or change lanes. The reference speed is also set here in order to prevent the speed limit from being exceeded.
  
- Trajectory: An exact path is calculated for each possible high-level target. For each trajectory, costs (based on feasibility, safety, legality, convenience, and efficiency) are derived and the trajectory with the lowest cost is selected. In this Project Lines 187 through 295 in main.cpp are the orbital creation part. This section essentially creates the trajectories using the output of the behavior planning section. It is very important that the trajectory created is smooth. Otherwise, undesirable accelerations can occur. For this purpose, past trajectory points are copied and waypoints filled with splines. The acceleration depends on each point on the trajectory to maintain dynamic decision making as traffic conditions can change abruptly. Therefore, the ego car can change its speed when changing lanes.
+   - **Trajectory:** An exact path is calculated for each possible high-level target. For each trajectory, costs (based on feasibility, safety, legality, convenience, and efficiency) are derived and the trajectory with the lowest cost is selected. In this Project Lines 187 through 295 in main.cpp are the orbital creation part. This section essentially creates the trajectories using the output of the behavior planning section. It is very important that the trajectory created is smooth. Otherwise, undesirable accelerations can occur. For this purpose, past trajectory points are copied and waypoints filled with splines. The acceleration depends on each point on the trajectory to maintain dynamic decision making as traffic conditions can change abruptly. Therefore, the ego car can change its speed when changing lanes.
  
  
  ![](/seiten.gif)
