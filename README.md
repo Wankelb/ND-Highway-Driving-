@@ -170,7 +170,9 @@ The path planning algorithms and Sensor Fusion algorithms start at src/main.cpp.
  
 ## Coordinate transforms
 
-                                        ![](/bild3.png)
+  <p align="center">
+<img src=".//bild3.png">
+</p> 
 
 
 
