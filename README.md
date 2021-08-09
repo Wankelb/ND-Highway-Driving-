@@ -170,9 +170,13 @@ The path planning algorithms and Sensor Fusion algorithms start at src/main.cpp.
  
 ## Coordinate transforms
 
-![](/bild3.png)
+                                             ![](/bild3.png)
+
+
+
 
 Before going into the main.cpp file details, discuss process models, mentioning "Frenet coordinates", which are a more intuitive representation of the position on a street than traditional (x, y) Cartesian coordinates. With Frenet coordinates, the variables s and d are used to describe the position of a vehicle on the road. The s-coordinate represents the distance along the road (also known as longitudinal displacement) and the d-coordinate represents the lateral position on the road.
+
 
 
 
