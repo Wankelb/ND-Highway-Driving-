@@ -130,9 +130,17 @@ Car does not have collisions.
 The car stays in its lane most of the time, but may change lanes or stop in the middle lane due to traffic.
 
 
+![](/gerade.gif)
+
+
+
 5- Lane Change
 
 The car can easily change lanes when it makes sense, e.g. B. behind a slower moving car and when there is no other traffic in a neighboring lane.
+
+
+![](/uberholen.gif)
+
 
 
 ## Call for IDE Profiles Pull Requests
