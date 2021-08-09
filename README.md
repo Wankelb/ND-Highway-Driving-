@@ -157,3 +157,7 @@ The Path Planning module is broken down into the following set of 3 sub-modules:
  Trajectory: An exact path is calculated for each possible high-level target. For each trajectory, costs (based on feasibility, safety, legality, convenience, and efficiency) are derived and the trajectory with the lowest cost is selected. In this Project Lines 187 through 295 in main.cpp are the orbital creation part. This section essentially creates the trajectories using the output of the behavior planning section. It is very important that the trajectory created is smooth. Otherwise, undesirable accelerations can occur. For this purpose, past trajectory points are copied and waypoints filled with splines. The acceleration depends on each point on the trajectory to maintain dynamic decision making as traffic conditions can change abruptly. Therefore, the ego car can change its speed when changing lanes.
  
  
+ ![](/seiten.gif)
+ 
+ 
+ 
